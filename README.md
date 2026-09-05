@@ -33,7 +33,7 @@ The exam questions are built on open data from the Recife city government: commu
 
 **Stack:** Electron · React · TypeScript · Vite · Monaco · Node · Express · Firebase Realtime Database · Judge0 · Docker · Zod · npm workspaces
 
-The part I'd point at first is the *Limitations* section of its README. It says, in writing, that the kiosk lockdown is UX deterrence and not an operating system security boundary, that Task Manager can always kill the process, that the teacher unlock doesn't yet reach the student's screen, and that there is no automated test coverage. Writing that down cost me nothing to hide and made the project honest.
+The part I'd point at first is the *Limitations* section of its README. It says, in writing, that the kiosk lockdown is UX deterrence and not an operating system security boundary, that Task Manager can always kill the process, that the teacher unlock doesn't yet reach the student's screen, and that there is no automated test coverage. Nobody made me write that down. A system nobody can trust the description of isn't one a school can adopt.
 
 ### [Interclasse ETEPD](https://github.com/dev-KauhanMelo/etepd-sistema-interclasse) · live platform for a school sports tournament
 
@@ -45,11 +45,13 @@ The interesting problem was the cheer button. I wanted anyone, unauthenticated, 
 
 ### [Ata Digital](https://github.com/dev-KauhanMelo/sistema-ata-etepd) · digital attendance for class representatives
 
-Replaces the paper attendance book. Two representatives per class mark attendance from their phones, with searchable history and auditable corrections.
+Designed to replace the paper attendance book. Two representatives per class mark attendance from their phones, with searchable history and auditable corrections.
 
 Most of the work here was in the business rules rather than the code. Attendance is recorded per day, not per lesson. Every tap saves immediately, so a dropped connection or a handover between the two representatives resumes exactly where it left off. After finalising, there's a twenty-minute free edit window before the session locks. Late arrivals and early departures stay editable all day regardless of the lock, always timestamped and attributed. The calendar view is derived, never destructive: no attendance record is ever deleted.
 
-Persistence is local-first behind a services layer, with a Prisma schema already written for the eventual Postgres migration. Deliberate: the school needed something working now, and the screens don't care where the data lives.
+Persistence is local-first behind a services layer, with a Prisma schema already written for the eventual Postgres migration. That way v1 is demonstrable without provisioning anything, and the screens don't care where the data lives when it moves.
+
+This one is built but not adopted. Attendance records are an official school instrument, so putting it into real use is a decision for internal bodies rather than for me, and I'd rather say that plainly than imply otherwise.
 
 **Stack:** React · Vite · Tailwind · Prisma schema · local-first services layer
 
@@ -57,7 +59,7 @@ Persistence is local-first behind a services layer, with a Prisma schema already
 
 I found a convergent iterative construction for the area of a circular segment while working a classroom problem, then went backwards to figure out what I'd actually found. It turned out to be a specific case of Archimedes' method of exhaustion. I formalised the derivation, worked through the convergence, and validated it numerically in GeoGebra and C++ against the closed form, with mentoring from one of my teachers.
 
-Finding out that a mathematician got there 2,200 years earlier was, honestly, the best part.
+Archimedes beat me to it by 2,200 years, which was, honestly, the best part.
 
 ### [Jarvis Tetraedro](https://github.com/dev-KauhanMelo/jarvis-geometria-3d) · augmented reality solid geometry
 
