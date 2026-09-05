@@ -155,8 +155,6 @@ A Flask application where teachers publish adapted teaching materials indexed by
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=dev-KauhanMelo&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&include_all_commits=true&count_private=true" height="160" alt="GitHub stats"/>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,50:1F6FEB,100:0D1117&height=110&section=footer" width="100%"/>
 
 </div>
